@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>CCC v4.3 Workout Mode</title>
+  <title>CCC v4.3 Workout Mode Fix</title>
   <meta name="theme-color" content="#0b1220">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,9 +14,9 @@
       <div class="hero-row">
         <div>
           <h1>Wayne Savage v4.3</h1>
-          <p class="sub">Real Workout Mode</p>
+          <p class="sub">Workout Mode Fix</p>
         </div>
-        <div class="hero-badge">LIVE FLOW</div>
+        <div class="hero-badge">FIXED</div>
       </div>
       <div class="premium-banner">
         <div>
@@ -47,14 +47,12 @@
           <div class="progress"><span id="readinessBar"></span></div>
           <div class="coach-box"><div class="coach-title">CCC Coach</div><p id="coachMessage">Start by saving your first check-in.</p></div>
         </div>
-
         <div class="grid two">
           <div class="card stat"><div class="label">Weight</div><div class="value big" id="statWeight">--</div><div class="muted">Latest</div></div>
           <div class="card stat"><div class="label">Waist</div><div class="value big" id="statWaist">--</div><div class="muted">Latest</div></div>
           <div class="card stat"><div class="label">Protein</div><div class="value big" id="statProtein">--</div><div class="muted">Daily</div></div>
           <div class="card stat"><div class="label">Steps</div><div class="value big" id="statSteps">--</div><div class="muted">Daily</div></div>
         </div>
-
         <div class="card">
           <div class="card-head"><h2>30 Day Summary</h2></div>
           <div class="summary-grid">
@@ -64,7 +62,6 @@
             <div class="mini-card"><div class="label">Workouts</div><div class="value" id="sumWorkouts">0</div></div>
           </div>
         </div>
-
         <div class="card"><div class="card-head"><h2>Trend Snapshot</h2></div><div class="chart-wrap"><canvas id="miniChart" height="180"></canvas></div></div>
       </section>
 
@@ -73,121 +70,40 @@
           <div class="card-head"><h2>Daily Check-In</h2></div>
           <div class="form-grid">
             <input id="date" class="input full" type="date">
-            <div class="field-block">
-              <input id="weight" class="input" type="number" step="0.1" placeholder="Weight">
-              <div class="field-help">Example: 187.0</div>
-            </div>
-            <div class="field-block">
-              <input id="waist" class="input" type="number" step="0.1" placeholder="Waist">
-              <div class="field-help">Example: 36.0 inches</div>
-            </div>
-            <div class="field-block">
-              <input id="protein" class="input" type="number" placeholder="Protein">
-              <div class="field-help">Examples: 150 / 190 / 220</div>
-              <div class="chip-row">
-                <button class="chip" data-fill="protein" data-value="150" type="button">150</button>
-                <button class="chip" data-fill="protein" data-value="190" type="button">190 goal</button>
-                <button class="chip" data-fill="protein" data-value="220" type="button">220</button>
-              </div>
-            </div>
-            <div class="field-block">
-              <input id="steps" class="input" type="number" placeholder="Steps">
-              <div class="field-help">Examples: 4000 / 8000 / 10000</div>
-              <div class="chip-row">
-                <button class="chip" data-fill="steps" data-value="4000" type="button">4000</button>
-                <button class="chip" data-fill="steps" data-value="8000" type="button">8000 goal</button>
-                <button class="chip" data-fill="steps" data-value="10000" type="button">10000</button>
-              </div>
-            </div>
-            <div class="field-block">
-              <select id="backPain" class="select">
-                <option value="">Back pain</option>
-                <option value="0">0 - none</option>
-                <option value="2">2 - slight stiffness</option>
-                <option value="4">4 - noticeable but manageable</option>
-                <option value="6">6 - limits training</option>
-                <option value="8">8 - severe</option>
-                <option value="10">10 - stop and recover</option>
-              </select>
-            </div>
-            <div class="field-block">
-              <select id="kneePain" class="select">
-                <option value="">Knee pain</option>
-                <option value="0">0 - none</option>
-                <option value="2">2 - slight stiffness</option>
-                <option value="4">4 - noticeable but manageable</option>
-                <option value="6">6 - limits training</option>
-                <option value="8">8 - severe</option>
-                <option value="10">10 - stop and recover</option>
-              </select>
-            </div>
-            <div class="field-block full">
-              <select id="energy" class="select">
-                <option value="">Energy 1-10</option>
-                <option value="3">3 - dragging</option>
-                <option value="5">5 - okay but flat</option>
-                <option value="7">7 - solid</option>
-                <option value="9">9 - strong day</option>
-                <option value="10">10 - peak</option>
-              </select>
-            </div>
-            <div class="field-block full">
-              <textarea id="notes" class="textarea" placeholder="Notes"></textarea>
-            </div>
+            <div class="field-block"><input id="weight" class="input" type="number" step="0.1" placeholder="Weight"><div class="field-help">Example: 187.0</div></div>
+            <div class="field-block"><input id="waist" class="input" type="number" step="0.1" placeholder="Waist"><div class="field-help">Example: 36.0 inches</div></div>
+            <div class="field-block"><input id="protein" class="input" type="number" placeholder="Protein"><div class="field-help">Examples: 150 / 190 / 220</div><div class="chip-row"><button class="chip" data-fill="protein" data-value="150" type="button">150</button><button class="chip" data-fill="protein" data-value="190" type="button">190 goal</button><button class="chip" data-fill="protein" data-value="220" type="button">220</button></div></div>
+            <div class="field-block"><input id="steps" class="input" type="number" placeholder="Steps"><div class="field-help">Examples: 4000 / 8000 / 10000</div><div class="chip-row"><button class="chip" data-fill="steps" data-value="4000" type="button">4000</button><button class="chip" data-fill="steps" data-value="8000" type="button">8000 goal</button><button class="chip" data-fill="steps" data-value="10000" type="button">10000</button></div></div>
+            <div class="field-block"><select id="backPain" class="select"><option value="">Back pain</option><option value="0">0 - none</option><option value="2">2 - slight stiffness</option><option value="4">4 - noticeable but manageable</option><option value="6">6 - limits training</option><option value="8">8 - severe</option><option value="10">10 - stop and recover</option></select></div>
+            <div class="field-block"><select id="kneePain" class="select"><option value="">Knee pain</option><option value="0">0 - none</option><option value="2">2 - slight stiffness</option><option value="4">4 - noticeable but manageable</option><option value="6">6 - limits training</option><option value="8">8 - severe</option><option value="10">10 - stop and recover</option></select></div>
+            <div class="field-block full"><select id="energy" class="select"><option value="">Energy 1-10</option><option value="3">3 - dragging</option><option value="5">5 - okay but flat</option><option value="7">7 - solid</option><option value="9">9 - strong day</option><option value="10">10 - peak</option></select></div>
+            <div class="field-block full"><textarea id="notes" class="textarea" placeholder="Notes"></textarea></div>
           </div>
-          <div class="button-row">
-            <button id="saveBtn" class="btn btn-gold" type="button">Save Check-In</button>
-            <button id="clearFormBtn" class="btn btn-outline" type="button">Clear Form</button>
-          </div>
+          <div class="button-row"><button id="saveBtn" class="btn btn-gold" type="button">Save Check-In</button><button id="clearFormBtn" class="btn btn-outline" type="button">Clear Form</button></div>
           <div id="saveStatus" class="save-status"></div>
         </div>
       </section>
 
       <section class="tab-panel" id="history">
-        <div class="card">
-          <div class="card-head"><h2>Saved History</h2><button id="exportBtn" class="btn btn-outline small-btn" type="button">Export JSON</button></div>
-          <div class="chart-wrap"><canvas id="historyChart" height="230"></canvas></div>
-        </div>
-        <div class="card">
-          <div class="card-head"><h2>Entries</h2><button id="deleteAllBtn" class="btn btn-outline small-btn danger-btn" type="button">Delete All</button></div>
-          <div id="entryList" class="entry-list"></div>
-        </div>
-        <div class="card">
-          <div class="card-head"><h2>Workout History</h2></div>
-          <div id="workoutHistoryList" class="entry-list"></div>
-        </div>
+        <div class="card"><div class="card-head"><h2>Saved History</h2><button id="exportBtn" class="btn btn-outline small-btn" type="button">Export JSON</button></div><div class="chart-wrap"><canvas id="historyChart" height="230"></canvas></div></div>
+        <div class="card"><div class="card-head"><h2>Entries</h2><button id="deleteAllBtn" class="btn btn-outline small-btn danger-btn" type="button">Delete All</button></div><div id="entryList" class="entry-list"></div></div>
+        <div class="card"><div class="card-head"><h2>Workout History</h2></div><div id="workoutHistoryList" class="entry-list"></div></div>
       </section>
 
       <section class="tab-panel" id="train">
         <div id="trainList"></div>
-
         <div class="card">
           <div class="card-head"><h2>Live Workout Mode</h2></div>
           <div id="sessionEmpty" class="rule">Tap any Start Session button to begin a guided workout flow.</div>
           <div id="sessionPanel" class="hidden">
-            <div class="session-top">
-              <div><div class="label">Current Workout</div><div class="session-title" id="sessionWorkoutName">Workout</div></div>
-              <div class="badge" id="sessionProgress">1 / 6</div>
-            </div>
+            <div class="session-top"><div><div class="label">Current Workout</div><div class="session-title" id="sessionWorkoutName">Workout</div></div><div class="badge" id="sessionProgress">1 / 6</div></div>
             <div class="thumb big-thumb" id="sessionIcon">💪</div>
             <div class="session-exercise" id="sessionExerciseName">Exercise</div>
             <div class="field-help" id="sessionCue">Cue</div>
             <div class="link-row"><a class="example-link primary" id="sessionWatchLink" href="#" target="_blank" rel="noopener noreferrer">▶ Watch Example</a></div>
-            <div class="session-targets">
-              <div class="mini-card"><div class="label">Target</div><div class="value" id="sessionTarget">4 x 10</div></div>
-              <div class="mini-card"><div class="label">Rest</div><div class="value" id="restSecondsDisplay">90s</div></div>
-            </div>
-            <div class="button-row">
-              <button id="doneExerciseBtn" class="btn btn-gold" type="button">Done Exercise</button>
-              <button id="skipExerciseBtn" class="btn btn-outline" type="button">Skip</button>
-            </div>
-            <div class="rest-box">
-              <div class="card-head compact-head"><h3>Rest Timer</h3><span id="restTimerDisplay">01:30</span></div>
-              <div class="button-row">
-                <button id="startRestBtn" class="btn btn-outline" type="button">Start Rest</button>
-                <button id="resetRestBtn" class="btn btn-outline" type="button">Reset</button>
-              </div>
-            </div>
+            <div class="session-targets"><div class="mini-card"><div class="label">Target</div><div class="value" id="sessionTarget">4 x 10</div></div><div class="mini-card"><div class="label">Rest</div><div class="value" id="restSecondsDisplay">90s</div></div></div>
+            <div class="button-row"><button id="doneExerciseBtn" class="btn btn-gold" type="button">Done Exercise</button><button id="skipExerciseBtn" class="btn btn-outline" type="button">Skip</button></div>
+            <div class="rest-box"><div class="card-head compact-head"><h3>Rest Timer</h3><span id="restTimerDisplay">01:30</span></div><div class="button-row"><button id="startRestBtn" class="btn btn-outline" type="button">Start Rest</button><button id="resetRestBtn" class="btn btn-outline" type="button">Reset</button></div></div>
             <div id="sessionStatus" class="save-status"></div>
             <button id="finishWorkoutBtn" class="btn btn-outline" type="button">Finish Workout</button>
           </div>
@@ -195,21 +111,12 @@
       </section>
 
       <section class="tab-panel" id="travel">
-        <div class="card"><div class="card-head"><h2>Travel Mode</h2></div>
-          <select id="travelSelect" class="select">
-            <option value="hotel">Hotel Gym</option>
-            <option value="bodyweight">No Equipment</option>
-            <option value="recovery">Recovery Day</option>
-          </select>
-        </div>
+        <div class="card"><div class="card-head"><h2>Travel Mode</h2></div><select id="travelSelect" class="select"><option value="hotel">Hotel Gym</option><option value="bodyweight">No Equipment</option><option value="recovery">Recovery Day</option></select></div>
         <div id="travelList"></div>
       </section>
     </main>
-
-    <footer class="footer-bar">
-      <div class="label">CCC Tracker</div>
-      <div class="streak" id="entryCountFooter">0 Entries</div>
-    </footer>
+    <footer class="footer-bar"><div class="label">CCC Tracker</div><div class="streak" id="entryCountFooter">0 Entries</div></footer>
   </div>
   <script src="app.js"></script>
-</body></html>
+</body>
+</html>
