@@ -1,8 +1,12 @@
-CCC Mobile Beta Deploy Package
+CCC v4 Real Tracker
 
-Upload files to Vercel, Netlify, or any static host.
+This build adds:
+- saved daily entries
+- history list
+- weight charts
+- export JSON
+- delete individual entries
+- delete all entries
 
-After deploy:
-Open site in Safari on iPhone
-Tap Share
-Add to Home Screen
+It stores data in the current browser/device local storage.
+Deploy to Vercel, Netlify, GitHub Pages, or any static host.
