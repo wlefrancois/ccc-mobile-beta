@@ -1,9 +1,12 @@
-CCC v4.2 Real Tracker
+CCC v4.3 Real Workout Mode
 
-Added on top of v4.1:
-- visual exercise cards with thumbnail-style icons
-- main exercise cue shown on each workout card
-- stronger workout example links
-- cleaner train and travel sections for mobile use
+Includes:
+- working Start Session flow
+- exercise-by-exercise workout mode
+- rest timer
+- skip exercise
+- finish workout
+- workout completion history
+- all exercise example links
 
-Data still stores locally on the current device/browser.
+Storage is still local on this device/browser.
