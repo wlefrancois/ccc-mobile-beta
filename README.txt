@@ -1,12 +1,9 @@
-CCC v4 Real Tracker
+CCC v4.2 Real Tracker
 
-This build adds:
-- saved daily entries
-- history list
-- weight charts
-- export JSON
-- delete individual entries
-- delete all entries
+Added on top of v4.1:
+- visual exercise cards with thumbnail-style icons
+- main exercise cue shown on each workout card
+- stronger workout example links
+- cleaner train and travel sections for mobile use
 
-It stores data in the current browser/device local storage.
-Deploy to Vercel, Netlify, GitHub Pages, or any static host.
+Data still stores locally on the current device/browser.

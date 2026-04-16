@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>CCC v4 Real Tracker</title>
+  <title>CCC v4.2 Real Tracker</title>
   <meta name="theme-color" content="#0b1220">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -15,15 +15,15 @@
       <div class="eyebrow">Carnivore Command Center</div>
       <div class="hero-row">
         <div>
-          <h1>Wayne Savage v4</h1>
-          <p class="sub">Real Tracker Beta</p>
+          <h1>Wayne Savage v4.2</h1>
+          <p class="sub">Tracker + Examples + Exercise Cards</p>
         </div>
-        <div class="hero-badge">TRACKING</div>
+        <div class="hero-badge">ENHANCED</div>
       </div>
       <div class="premium-banner">
         <div>
-          <div class="premium-label">Functional Build</div>
-          <div class="premium-title">Track. Review. Improve.</div>
+          <div class="premium-label">Practical Build</div>
+          <div class="premium-title">Train Smarter. Track Faster.</div>
         </div>
         <div class="premium-icon">◉</div>
       </div>
@@ -84,14 +84,79 @@
           <div class="card-head"><h2>Daily Check-In</h2></div>
           <div class="form-grid">
             <input id="date" class="input full" type="date">
-            <input id="weight" class="input" type="number" step="0.1" placeholder="Weight">
-            <input id="waist" class="input" type="number" step="0.1" placeholder="Waist">
-            <input id="protein" class="input" type="number" placeholder="Protein">
-            <input id="steps" class="input" type="number" placeholder="Steps">
-            <input id="backPain" class="input" type="number" min="0" max="10" placeholder="Back pain">
-            <input id="kneePain" class="input" type="number" min="0" max="10" placeholder="Knee pain">
-            <input id="energy" class="input full" type="number" min="0" max="10" placeholder="Energy 1-10">
-            <textarea id="notes" class="textarea full" placeholder="Notes"></textarea>
+
+            <div class="field-block">
+              <input id="weight" class="input" type="number" step="0.1" placeholder="Weight">
+              <div class="field-help">Example: 187.0</div>
+            </div>
+
+            <div class="field-block">
+              <input id="waist" class="input" type="number" step="0.1" placeholder="Waist">
+              <div class="field-help">Example: 36.0 inches</div>
+            </div>
+
+            <div class="field-block">
+              <input id="protein" class="input" type="number" placeholder="Protein">
+              <div class="field-help">Examples: 150 light day, 190 goal, 220 high day</div>
+              <div class="chip-row">
+                <button class="chip" data-fill="protein" data-value="150" type="button">150</button>
+                <button class="chip" data-fill="protein" data-value="190" type="button">190 goal</button>
+                <button class="chip" data-fill="protein" data-value="220" type="button">220</button>
+              </div>
+            </div>
+
+            <div class="field-block">
+              <input id="steps" class="input" type="number" placeholder="Steps">
+              <div class="field-help">Examples: 4000 low, 8000 goal, 10000 strong day</div>
+              <div class="chip-row">
+                <button class="chip" data-fill="steps" data-value="4000" type="button">4000</button>
+                <button class="chip" data-fill="steps" data-value="8000" type="button">8000 goal</button>
+                <button class="chip" data-fill="steps" data-value="10000" type="button">10000</button>
+              </div>
+            </div>
+
+            <div class="field-block">
+              <select id="backPain" class="select">
+                <option value="">Back pain</option>
+                <option value="0">0 - none</option>
+                <option value="2">2 - slight stiffness</option>
+                <option value="4">4 - noticeable but manageable</option>
+                <option value="6">6 - limits training</option>
+                <option value="8">8 - severe</option>
+                <option value="10">10 - stop and recover</option>
+              </select>
+              <div class="field-help">Use your honest training-limiting level</div>
+            </div>
+
+            <div class="field-block">
+              <select id="kneePain" class="select">
+                <option value="">Knee pain</option>
+                <option value="0">0 - none</option>
+                <option value="2">2 - slight stiffness</option>
+                <option value="4">4 - noticeable but manageable</option>
+                <option value="6">6 - limits training</option>
+                <option value="8">8 - severe</option>
+                <option value="10">10 - stop and recover</option>
+              </select>
+              <div class="field-help">Score how it feels during walking/squatting</div>
+            </div>
+
+            <div class="field-block full">
+              <select id="energy" class="select">
+                <option value="">Energy 1-10</option>
+                <option value="3">3 - dragging</option>
+                <option value="5">5 - okay but flat</option>
+                <option value="7">7 - solid</option>
+                <option value="9">9 - strong day</option>
+                <option value="10">10 - peak</option>
+              </select>
+              <div class="field-help">Quick self-rating before or after training</div>
+            </div>
+
+            <div class="field-block full">
+              <textarea id="notes" class="textarea" placeholder="Notes"></textarea>
+              <div class="field-help">Examples: “knee sore on step-ups” or “great shoulder pump”</div>
+            </div>
           </div>
           <div class="button-row">
             <button id="saveBtn" class="btn btn-gold" type="button">Save Check-In</button>
@@ -129,7 +194,7 @@
       <section class="tab-panel" id="train">
         <div id="trainList"></div>
         <div class="card">
-          <div class="card-head"><h2>Form Reference</h2></div>
+          <div class="card-head"><h2>Form Reference + Example Links</h2></div>
           <div id="formList"></div>
         </div>
       </section>
